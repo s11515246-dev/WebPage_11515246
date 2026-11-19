@@ -4,14 +4,14 @@ const siteNav = document.querySelector('.site-nav');
 if (menuButton && siteNav) {
   const closeMenu = () => {
     menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', '????');
+    menuButton.setAttribute('aria-label', '開啟選單');
     siteNav.classList.remove('is-open');
   };
 
   menuButton.addEventListener('click', () => {
     const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!isExpanded));
-    menuButton.setAttribute('aria-label', isExpanded ? '????' : '????');
+    menuButton.setAttribute('aria-label', isExpanded ? '開啟選單' : '關閉選單');
     siteNav.classList.toggle('is-open', !isExpanded);
   });
 
